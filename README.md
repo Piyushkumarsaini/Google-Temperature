@@ -1,6 +1,6 @@
 # Google-Temperature 
-# "Bank User" project is a simple Python-based banking system.
-#  Features include account creation, balance checking, withdrawal, and deposit.
+#  Scraped Google search results to retrieve weather information.
+#  Utilized Beautiful Soup for HTML parsing and requests library for HTTP GET requests.
 #  Programming language : Python
 #  Python library : beautifulsoup, request
 #  Pthon framework : Django
