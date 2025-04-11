@@ -1,29 +1,35 @@
-# 🌡️ Google Temperature Tracker
+# Google Temperature Scraper using Django & BeautifulSoup
 
-This is a simple Django-based web application that shows the current temperature of any city by scraping real-time data directly from Google using BeautifulSoup. The aim of this project was to learn how to integrate **web scraping** with a **Django backend**, along with managing data using **MySQL**.
-
----
+This project allows users to get the current temperature of any city using Google search results. It uses web scraping with `BeautifulSoup` to extract live data and displays it via a Django-powered API. The temperature data is also stored in a MySQL database for further analysis.
 
 ## 📌 Features
 
-- Enter any city name to get its current temperature
-- Real-time data fetched directly from Google search
-- Clean and simple Django-based web interface
-- Scraped data handled securely using Python's BeautifulSoup
-- Backend connected with MySQL database (manually designed)
+- Get current temperature of any city via Google search
+- Store data (city, temperature, time, date) in MySQL
+- Automatically create the table if not exists
+- Track highest and lowest temperatures for a city (on the same day)
+- Fetch temperature using a simple API endpoint
 
----
+## ⚙️ Technologies Used
 
-## ⚙️ Tech Stack Used
+- **Python**
+- **Django**
+- **Web Scraping** – BeautifulSoup, Requests
+- **MySQL** – Manual table creation and data handling using `mysql.connector`
+- **JSON & API** – Django `JsonResponse` to return temperature data
+- **Postman** – For API Testing
+- **Git & GitHub** – Version control and collaboration
 
-- **Backend**: Python, Django  
-- **Web Scraping**: BeautifulSoup, Requests  
-- **Database**: MySQL  
-- **Tools**: Git, GitHub, Postman
+## 📁 Project Structure
 
----
+- `views.py`:
+  - `TemperatureScrap`: Scrapes temperature from Google, saves to database, and shows current, lowest, and highest temperatures.
+  - `user_input`: Accepts JSON input from user and extracts city name.
+- `MySQL Database`:
+  - Table: `google_detail`
+  - Columns: `City_Name`, `Temperature`, `Time`, `Date`
 
-## ▶️ How to Run This Project
+## 📦 How to Run
 
 1. Clone the repository:
    ```bash
